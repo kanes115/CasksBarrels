@@ -5,7 +5,6 @@ defmodule CasksBarrels do
     children = [
       Plug.Cowboy.child_spec(
         scheme: :http,
-        plug: CasksBarrelsWeb.Router,
         options: [
           dispatch: dispatch(),
           port: 4000

@@ -16,7 +16,6 @@ defmodule CasksBarrels.Room do
   def register_player(room, pid) do
     player = %Player{id: UUID.uuid4(), pid: pid}
 
-    # %{room | players: room.players ++ [player]}
     new_room =
       room
       |> Map.update!(:players, &(&1 ++ [player]))
